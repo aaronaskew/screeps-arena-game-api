@@ -1,4 +1,4 @@
-use enum_iterator::IntoEnumIterator;
+use enum_iterator::Sequence;
 use wasm_bindgen::prelude::*;
 use serde::{Deserialize, Serialize};
 use crate::objects::*;
@@ -6,7 +6,7 @@ use crate::enums::StructureObject;
 
 /// Translates `LOOK_*` constants.
 #[wasm_bindgen]
-#[derive(Copy, Clone, Debug, PartialEq, Eq, Hash, Serialize, Deserialize, IntoEnumIterator)]
+#[derive(Copy, Clone, Debug, PartialEq, Eq, Hash, Serialize, Deserialize, Sequence)]
 pub enum Look {
     Creeps = "creep",
     Energy = "energy",

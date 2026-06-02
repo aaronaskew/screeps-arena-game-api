@@ -1,6 +1,6 @@
 //! Various constants translated as small enums.
 
-use enum_iterator::IntoEnumIterator;
+use enum_iterator::Sequence;
 use num_derive::FromPrimitive;
 use num_traits::FromPrimitive;
 use serde::{Deserialize, Serialize};
@@ -81,7 +81,7 @@ impl TryFrom<JsValue> for ReturnCode {
     FromPrimitive,
     Serialize_repr,
     Deserialize_repr,
-    IntoEnumIterator,
+    Sequence,
 )]
 #[repr(u8)]
 pub enum Direction {
@@ -251,7 +251,7 @@ impl fmt::Display for Direction {
     FromPrimitive,
     Serialize_repr,
     Deserialize_repr,
-    IntoEnumIterator,
+    Sequence,
 )]
 #[repr(u8)]
 pub enum Terrain {

@@ -1,7 +1,7 @@
 //! `*Type` constants.
 
 // use std::{borrow::Cow, str::FromStr};
-use enum_iterator::IntoEnumIterator;
+use enum_iterator::Sequence;
 use serde::{Deserialize, Serialize};
 use wasm_bindgen::prelude::*;
 
@@ -66,7 +66,7 @@ use wasm_bindgen::prelude::*;
 
 /// Resource type constant for all possible types of resources.
 #[wasm_bindgen]
-#[derive(Copy, Clone, Debug, PartialEq, Eq, Hash, Serialize, Deserialize, IntoEnumIterator)]
+#[derive(Copy, Clone, Debug, PartialEq, Eq, Hash, Serialize, Deserialize, Sequence)]
 pub enum ResourceType {
     Energy = "energy",
     #[cfg(feature = "enable-score")]
@@ -86,7 +86,7 @@ pub enum ResourceType {
 #[cfg(feature = "enable-area-effect")]
 #[cfg_attr(docsrs, doc(cfg(feature = "enable-area-effect")))]
 #[wasm_bindgen]
-#[derive(Copy, Clone, Debug, PartialEq, Eq, Hash, Serialize, Deserialize, IntoEnumIterator)]
+#[derive(Copy, Clone, Debug, PartialEq, Eq, Hash, Serialize, Deserialize, Sequence)]
 pub enum EffectType {
     Freeze = "freeze",
     Damage = "damage",

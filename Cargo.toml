@@ -1,6 +1,6 @@
 [package]
 name = "screeps-arena-game-api"
-version = "0.10.0"
+version = "0.10.0-fork-1"
 authors = ["David Ross <daboross@daboross.net>"]
 documentation = "https://docs.rs/screeps-arena-game-api/"
 edition = "2021"
